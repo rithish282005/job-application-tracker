@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('job_application.jpg'); /* Place the image in the same folder or adjust the path */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        form, h2 {
+            margin-top: 20px;
+        }
+        input, select, button {
+            margin: 5px;
+            padding: 8px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Job Application Tracker</h1>
+        <form id="appForm">
+            <input type="text" id="company" placeholder="Company Name" required><br>
+            <input type="text" id="jobTitle" placeholder="Job Title" required><br>
+            <input type="date" id="dateApplied" required><br>
+            <select id="status">
+                <option value="Applied">Applied</option>
+                <option value="Interview">Interview</option>
+                <option value="Rejected">Rejected</option>
+                <option value="Offer">Offer</option>
+            </select><br>
+            <button type="submit">Add Application</button>
+        </form>
+
+        <h2>Applications</h2>
+        <ul id="applicationList"></ul>
+    </center>
+
+    <script src="script.js"></script>
+</body>
+</html>
